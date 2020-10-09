@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(void) {
+  map<char, int> pangram;
+  int wordLength;
+  string word;
+  
+  cin >> wordLength;
+
+  if(wordLength < 26) {
+    cout << "NO";
+    return 0;
+  }
+
+  cin >> word;
+  
+  for(auto i = word.begin(); i != word.end(); ++i) {
+    if(*i >= 'A' && *i <= 'Z') {
+      pangram[*i + 32]++;
+    }
+    else {
+      pangram[*i]++;
+    }
+    
+    if(pangram.size() == 26) {
+      cout << "YES";
+      return 0;
+    }
+  }
+  
+  cout << "NO";
+  return 0;
+}

@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(void) {
+  map<int, int> m;
+  int year;
+
+  cin >> year;
+
+  year--;
+  
+  while(year++) {
+    
+  }
+
+  return 0;
+}

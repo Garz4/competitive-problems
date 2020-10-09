@@ -1,0 +1,42 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(void) {
+  map<int, int> students;
+  map<int, int>::iterator j;
+  int testCases, studentsSize, currSkill, maxSkill, maxTeams;
+
+  cin >> testCases;
+
+  while(testCases--) {
+    students.clear();
+    cin >> studentsSize;
+    
+    while(studentsSize--) {
+      cin >> currSkill;
+      students[currSkill]++;
+    }
+
+    maxSkill = 0;
+    maxTeams = 0;
+    
+    for(j = students.begin(); j != students.end(); ++j)
+      if(j->second > maxSkill) maxSkill = j->second;
+    
+    if(maxSkill <= students.size() - 1) {
+      maxTeams = maxSkill;
+    }
+    else
+      for(int x = 1; x < students.size(); ++x) {
+       	if(maxSkill - x <= students.size()) {
+	  maxTeams = maxSkill - x;
+	  break;
+	}
+      }
+    
+    cout << maxTeams << endl;
+  }
+
+  system("PAUSE");
+  return 0;
+}

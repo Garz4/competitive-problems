@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(void) {
+  int arraySize, currVal;
+  vector<int> present;
+  
+  cin >> arraySize;
+
+  while(arraySize--) {
+    cin >> currVal;
+    present.push_back(currVal);
+  }
+
+  present.insert(present.begin(), 1);
+  present.erase(present.end()-1);
+
+  sort(present.begin(), present.end());
+  for(int i : present)
+    cout << i << " ";
+  return 0;
+}

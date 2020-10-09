@@ -1,0 +1,8 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(void) {
+  if(-1) cout << "yes" << endl;
+  system("PAUSE");
+  return 0;
+}

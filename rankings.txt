@@ -1,0 +1,11 @@
+========= RANKINGS =========
+   0 - 1200: Newbie
+1200 - 1400: Pupil
+1400 - 1600: Specialist
+1600 - 1900: Expert
+1900 - 2100: Candidate master
+2100 - 2300: Master
+2300 - 2400: International master
+2400 - 2600: Grandmaster
+2600 - 3000: International grandmaster
+   3000+   : Legendary grandmaster

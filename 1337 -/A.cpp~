@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(void) {
+  int testCases, a, b, c, d;
+
+  cin >> testCases;
+
+  while(testCases--) {
+    cin >> a >> b >> c >> d;
+    //if(b == c)
+      cout << a << " " << b << " " << c << endl;
+    //else
+    //  cout << b << " " << sqrt(c*c - b*b) << " " << c << endl;
+    
+  }
+  
+  return 0;
+}
