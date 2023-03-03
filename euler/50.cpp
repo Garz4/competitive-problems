@@ -15,9 +15,8 @@ static inline bool is_prime(const unsigned long long& number) {
 }
 
 int main() {
-  std::vector<unsigned long long> primes;
+  std::vector<unsigned long long> primes{2};
   std::set<unsigned long long> unique;
-  primes.push_back(2);
   const unsigned long long limit = 1000000;
   unsigned long long biggest_prime = 0;
   unsigned long long largest_terms = 0;
