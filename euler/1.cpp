@@ -4,7 +4,7 @@ static constexpr bool is_multiple(const int& number) {
   return number % 3 == 0 || number % 5 == 0;
 }
 
-int main() {
+int main(void) {
   const int limit = 1000;
   unsigned long long sum = 0;
 
