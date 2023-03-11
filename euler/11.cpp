@@ -1,7 +1,7 @@
 #include <iostream>
 #include <climits>
 
-#include "numbers.hpp"
+#include "euler.hpp"
 
 static constexpr int initial_value = 1;
 static constexpr int limit = INT_MAX;
@@ -27,7 +27,7 @@ static inline constexpr int get_total_divisors(
 int main(void) {
   unsigned long long first_triangle_number;
   int current_divisors;
-  const auto triangle_numbers = get_triangle_numbers();
+  const auto triangle_numbers = euler::triangle_numbers();
 
   for (auto i : triangle_numbers) {
     current_divisors = get_total_divisors(i);

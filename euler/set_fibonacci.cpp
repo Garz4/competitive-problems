@@ -2,14 +2,14 @@
 #include <fstream>
 #include <iostream>
 
-#include "numbers.hpp"
+#include "euler.hpp"
 
 static constexpr unsigned long long limit = 1000000000000000000;
 
 int main(void) {
   std::ofstream fibonacci_file;
 
-  fibonacci_file.open(fibonacci_filename);
+  fibonacci_file.open(euler::fibonacci_sequence_filename);
 
   if (!fibonacci_file.is_open()) {
     throw std::runtime_error("Error opening the file.");

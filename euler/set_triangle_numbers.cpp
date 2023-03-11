@@ -2,14 +2,14 @@
 #include <fstream>
 #include <iostream>
 
-#include "numbers.hpp"
+#include "euler.hpp"
 
 static constexpr unsigned long long limit = 100000;
 
 int main(void) {
   std::ofstream triangles_file;
 
-  triangles_file.open(triangle_numbers_filename);
+  triangles_file.open(euler::triangle_numbers_filename);
 
   if (!triangles_file.is_open()) {
     throw std::runtime_error("Error opening the file.");

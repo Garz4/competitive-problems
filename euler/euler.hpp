@@ -5,8 +5,10 @@
 #include <string>
 #include <vector>
 
-constexpr char primes_filename[] = R"(primes.txt)";
-constexpr char fibonacci_filename[] = R"(fibonacci.txt)";
+namespace euler {
+
+constexpr char prime_numbers_filename[] = R"(primes.txt)";
+constexpr char fibonacci_sequence_filename[] = R"(fibonacci.txt)";
 constexpr char triangle_numbers_filename[] = R"(triangle_numbers.txt)";
 
 // Throws runtime error.
@@ -33,14 +35,16 @@ std::vector<unsigned long long> get_numbers(const char (&filename)[N]) {
   return response;
 }
 
-auto get_primes() {
-  return get_numbers(primes_filename);
+auto prime_numbers() {
+  return get_numbers(prime_numbers_filename);
 }
 
-auto get_fibonacci() {
-  return get_numbers(fibonacci_filename);
+auto fibonacci_sequence() {
+  return get_numbers(fibonacci_sequence_filename);
 }
 
-auto get_triangle_numbers() {
+auto triangle_numbers() {
   return get_numbers(triangle_numbers_filename);
 }
+
+} // euler

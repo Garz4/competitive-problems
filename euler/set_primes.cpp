@@ -2,7 +2,7 @@
 #include <fstream>
 #include <iostream>
 
-#include "numbers.hpp"
+#include "euler.hpp"
 
 static constexpr unsigned long long limit = 10000000;
 
@@ -19,7 +19,7 @@ static inline bool is_prime(const unsigned long long& number) {
 int main(void) {
   std::ofstream primes_file;
 
-  primes_file.open(primes_filename);
+  primes_file.open(euler::prime_numbers_filename);
 
   if (!primes_file.is_open()) {
     throw std::runtime_error("Error opening the file.");

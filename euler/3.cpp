@@ -1,12 +1,12 @@
 #include <iostream>
 #include <vector>
 
-#include "numbers.hpp"
+#include "euler.hpp"
 
 static constexpr unsigned long long number = 600851475143;
 
 int main(void) {
-  const auto primes = get_primes();
+  const auto primes = euler::prime_numbers();
 
   for (auto i = primes.rbegin(); i != primes.rend(); ++i) {
     if (number % *i == 0) {
