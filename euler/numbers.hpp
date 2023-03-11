@@ -7,6 +7,7 @@
 
 constexpr char primes_filename[] = R"(primes.txt)";
 constexpr char fibonacci_filename[] = R"(fibonacci.txt)";
+constexpr char triangle_numbers_filename[] = R"(triangle_numbers.txt)";
 
 // Throws runtime error.
 template <std::size_t N>
@@ -38,4 +39,8 @@ auto get_primes() {
 
 auto get_fibonacci() {
   return get_numbers(fibonacci_filename);
+}
+
+auto get_triangle_numbers() {
+  return get_numbers(triangle_numbers_filename);
 }
