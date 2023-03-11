@@ -1,8 +1,6 @@
 #include <iostream>
 #include <vector>
 
-#include "numbers.hpp"
-
 static constexpr int digits = 13;
 static constexpr int big_number_length = 1000;
 static constexpr char big_number[] = 

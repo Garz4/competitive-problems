@@ -1,8 +1,5 @@
 #include <cmath>
 #include <iostream>
-#include <vector>
-
-#include "numbers.hpp"
 
 static constexpr int target = 1000;
 
