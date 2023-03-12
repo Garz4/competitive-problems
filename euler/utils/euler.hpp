@@ -1,5 +1,6 @@
 #pragma once
 
+#include <iostream>
 #include <fstream>
 #include <sstream>
 #include <string>
@@ -7,9 +8,9 @@
 
 namespace euler {
 
-constexpr char prime_numbers_filename[] = R"(primes.txt)";
-constexpr char fibonacci_sequence_filename[] = R"(fibonacci.txt)";
-constexpr char triangle_numbers_filename[] = R"(triangle_numbers.txt)";
+constexpr char prime_numbers_filename[] = R"(../utils/primes.txt)";
+constexpr char fibonacci_sequence_filename[] = R"(../utils/fibonacci.txt)";
+constexpr char triangle_numbers_filename[] = R"(../utils/triangle_numbers.txt)";
 
 // Throws runtime error.
 template <std::size_t N>
@@ -17,6 +18,7 @@ std::vector<unsigned long long> get_numbers(const char (&filename)[N]) {
   std::ifstream numbers_file(filename);
 
   if (!numbers_file.is_open()) {
+    std::cout << "'" << filename << "'" << std::endl;
     throw std::runtime_error("Error opening the file.");
   }
 

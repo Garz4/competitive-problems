@@ -1,7 +1,7 @@
 #include <iostream>
 #include <climits>
 
-#include "euler.hpp"
+#include "../utils/euler.hpp"
 
 static constexpr int initial_value = 1;
 static constexpr int limit = INT_MAX;

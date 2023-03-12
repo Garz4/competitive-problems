@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-#include "euler.hpp"
+#include "../utils/euler.hpp"
 
 static constexpr unsigned long long number = 600851475143;
 

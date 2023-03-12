@@ -1,3 +1,3 @@
-euler/fibonacci.txt
-euler/primes.txt
-euler/triangle_numbers.txt
+euler/utils/fibonacci.txt
+euler/utils/primes.txt
+euler/utils/triangle_numbers.txt

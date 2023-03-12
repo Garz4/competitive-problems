@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-#include "euler.hpp"
+#include "../utils/euler.hpp"
 
 static constexpr size_t target_index = 10000;
 
