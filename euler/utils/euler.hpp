@@ -37,16 +37,8 @@ std::vector<unsigned long long> get_numbers(const char (&filename)[N]) {
   return response;
 }
 
-auto prime_numbers() {
-  return get_numbers(prime_numbers_filename);
-}
-
-auto fibonacci_sequence() {
-  return get_numbers(fibonacci_sequence_filename);
-}
-
-auto triangle_numbers() {
-  return get_numbers(triangle_numbers_filename);
-}
+auto prime_numbers() { return get_numbers(prime_numbers_filename); }
+auto fibonacci_sequence() { return get_numbers(fibonacci_sequence_filename); }
+auto triangle_numbers() { return get_numbers(triangle_numbers_filename); }
 
 } // euler
