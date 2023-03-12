@@ -4,30 +4,16 @@
 #include <vector>
 #include <set>
 
-static inline bool is_prime(const unsigned long long& number) {
- for (unsigned long long i = 2; i <= std::ceil(std::sqrt(number)); i++) {
-      if (number % i == 0) {
-        return false;
-      }
-  }
-
-  return true;
-}
+#include "../utils/euler.hpp"
 
 int main() {
-  std::vector<unsigned long long> primes{2};
+  const auto primes = euler::prime_numbers();
   std::set<unsigned long long> unique;
   const unsigned long long limit = 1000000;
   unsigned long long biggest_prime = 0;
   unsigned long long largest_terms = 0;
   unsigned long long current_sum;
   unsigned long long terms;
-
-  for (unsigned long long i = 3; i < limit; ++i) {
-    if (is_prime(i)) {
-      primes.push_back(i);
-    }
-  }
 
   for (unsigned long long i = 0; i < primes.size(); ++i) {
     terms = 1;
