@@ -28,10 +28,10 @@ int main() {
       }
 
       if (std::binary_search(primes.begin(), primes.end(), current_sum)
-       && largest_terms < terms) {
+          && largest_terms < terms) {
         biggest_prime = std::max(biggest_prime, current_sum);
-      unique.insert(biggest_prime);
-      largest_terms = terms;
+        unique.insert(biggest_prime);
+        largest_terms = terms;
       }
     }
   }
