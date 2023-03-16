@@ -1,6 +1,8 @@
 #include <cmath>
 #include <iostream>
 
+// Runtime: 0m0.003s
+
 static constexpr int target = 1000;
 
 static constexpr bool is_integer(const float& number) {

@@ -2,6 +2,8 @@
 
 #include "../utils/euler.hpp"
 
+// Runtime: 0m0.161s
+
 static constexpr int limit = 2000000;
 
 int main(void) {

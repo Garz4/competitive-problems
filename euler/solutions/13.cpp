@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 
+// Runtime: 0m0.001s
+
 static constexpr size_t big_numbers_size = 100;
 static constexpr size_t big_numbers_digits = 50;
 static constexpr char big_numbers[big_numbers_size][big_numbers_digits + 1] = {

@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 
+// Runtime: 0m0.001s
+
 static unsigned long long greatest_product = 0;
 static unsigned long long current_product;
 static int current_quantity;

@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 
+// Runtime: 0m0.001s
+
 static constexpr int digits = 13;
 static constexpr int big_number_length = 1000;
 static constexpr char big_number[] = 

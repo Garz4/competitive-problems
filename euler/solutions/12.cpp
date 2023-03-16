@@ -3,6 +3,8 @@
 
 #include "../utils/euler.hpp"
 
+// Runtime: 16m24.818s
+
 static constexpr int initial_value = 1;
 static constexpr int limit = INT_MAX;
 static constexpr int expected_divisors = 500;

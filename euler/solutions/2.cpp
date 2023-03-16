@@ -3,6 +3,8 @@
 
 #include "../utils/euler.hpp"
 
+// Runtime: 0m0.001s
+
 static constexpr unsigned long long target = 4000000;
 
 int main(void) {

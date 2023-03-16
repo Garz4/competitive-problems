@@ -1,9 +1,11 @@
 #include <iostream>
 #include <string>
 
+// Runtime: 0m0.024s
+
 // Both numbers must be 3-digit numbers.
-static constexpr int max_number = 999;
 static constexpr int initial_number = 100;
+static constexpr int max_number = 999;
 
 static inline bool is_palindrome(const int& number) {
   const std::string parse = std::to_string(number);

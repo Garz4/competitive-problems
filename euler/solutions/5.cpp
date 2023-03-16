@@ -1,6 +1,8 @@
 #include <iostream>
 #include <climits>
 
+// Runtime: 0m1.009s
+
 static constexpr int limit = INT_MAX;
 static constexpr int begin_range = 1;
 static constexpr int end_range = 20;

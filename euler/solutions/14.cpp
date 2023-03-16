@@ -1,5 +1,7 @@
 #include <iostream>
 
+// Runtime: 0m0.349s
+
 static constexpr int limit = 1000000;
 
 static constexpr unsigned long long get_chain(const int& number) {

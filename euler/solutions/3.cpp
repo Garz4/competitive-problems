@@ -3,6 +3,8 @@
 
 #include "../utils/euler.hpp"
 
+// Runtime: 0m0.174s
+
 static constexpr unsigned long long number = 600851475143;
 
 int main(void) {

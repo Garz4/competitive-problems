@@ -1,5 +1,7 @@
 #include <iostream>
 
+// Runtime: 0m0.001s
+
 int main(void) {
   constexpr int limit = 100; 
   int sum_of_squares = 0;

@@ -3,6 +3,8 @@
 
 #include "../utils/euler.hpp"
 
+// Runtime: 0m0.158s
+
 static constexpr size_t target_index = 10000;
 
 int main(void) {
