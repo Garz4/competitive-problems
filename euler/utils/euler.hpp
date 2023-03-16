@@ -18,7 +18,7 @@ std::vector<unsigned long long> get_numbers(const char (&filename)[N]) {
   std::ifstream numbers_file(filename);
 
   if (!numbers_file.is_open()) {
-    std::cout << "'" << filename << "'" << std::endl;
+    std::cerr << "Error opening the file: '" << filename << "'" << std::endl;
     throw std::runtime_error("Error opening the file.");
   }
 
