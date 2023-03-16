@@ -6,9 +6,10 @@
 
 #include "../utils/euler.hpp"
 
+// Runtime: 0m0.390s
+
 int main() {
   const auto primes = euler::prime_numbers();
-  std::set<unsigned long long> unique;
   const unsigned long long limit = 1000000;
   unsigned long long biggest_prime = 0;
   unsigned long long largest_terms = 0;
@@ -30,7 +31,6 @@ int main() {
       if (std::binary_search(primes.begin(), primes.end(), current_sum)
           && largest_terms < terms) {
         biggest_prime = std::max(biggest_prime, current_sum);
-        unique.insert(biggest_prime);
         largest_terms = terms;
       }
     }
