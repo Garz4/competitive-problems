@@ -13,13 +13,12 @@ constexpr char fibonacci_sequence_filename[] = R"(../utils/fibonacci.txt)";
 constexpr char triangle_numbers_filename[] = R"(../utils/triangle_numbers.txt)";
 
 // Throws runtime error.
-template <std::size_t N>
-std::vector<unsigned long long> get_numbers(const char (&filename)[N]) {
+std::vector<unsigned long long> get_numbers(const char* filename) {
   std::ifstream numbers_file(filename);
 
   if (!numbers_file.is_open()) {
-    std::cerr << "Error opening the file: '" << filename << "'" << std::endl;
-    throw std::runtime_error("Error opening the file.");
+    throw std::runtime_error(std::string("Error opening the file: '")
+                             + filename + "'.");
   }
 
   std::vector<unsigned long long> response;
