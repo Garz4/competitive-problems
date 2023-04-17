@@ -4,7 +4,7 @@
 
 static constexpr int limit = 1000000;
 
-static constexpr unsigned long long get_chain(const int& number) {
+static inline constexpr unsigned long long get_chain(const int& number) {
   unsigned long long chain = 0;
   unsigned long long current = number;
 

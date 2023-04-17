@@ -5,7 +5,7 @@
 
 static constexpr int target = 1000;
 
-static constexpr bool is_integer(const float& number) {
+static inline constexpr bool is_integer(const float& number) {
   return number == std::ceil(number);
 }
 

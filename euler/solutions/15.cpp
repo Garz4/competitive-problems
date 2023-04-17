@@ -5,7 +5,7 @@
 static unsigned long long lattice_paths = 0;
 static constexpr size_t grid_size = 20;
 
-static inline void get_paths(const size_t& i, const size_t& j) {
+static void get_paths(const size_t& i, const size_t& j) {
   if (i == grid_size && j == grid_size) {
     lattice_paths++;
     return;
