@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 
+#include "../utils/euler.hpp"
+
 // Runtime: 0m0.001s
 
 static constexpr int digits = 13;
@@ -28,8 +30,8 @@ static constexpr char big_number[] =
 "71636269561882670428252483600823257530420752963450";
 
 int main(void) {
-  unsigned long long max_product = 0;
-  unsigned long long current_product;
+  euler::max_natural max_product = 0;
+  euler::max_natural current_product;
 
   for (int i = 0; i < big_number_length - digits; ++i) {
     if (big_number[i] == '0') {

@@ -1,8 +1,10 @@
 #include <iostream>
 
+#include "../utils/euler.hpp"
+
 // Runtime: 52m24.992s
 
-static unsigned long long lattice_paths = 0;
+static euler::max_natural lattice_paths = 0;
 static constexpr size_t grid_size = 20;
 
 static void get_paths(const size_t& i, const size_t& j) {

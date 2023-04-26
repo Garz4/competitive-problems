@@ -5,7 +5,7 @@
 
 // Runtime: 0m0.174s
 
-static constexpr unsigned long long number = 600851475143;
+static constexpr euler::max_natural number = 600851475143;
 
 int main(void) {
   const auto primes = euler::prime_numbers();

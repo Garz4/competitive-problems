@@ -8,6 +8,9 @@
 
 namespace euler {
 
+using max_natural = unsigned long long;
+using max_integer = long long;
+
 constexpr char prime_numbers_filename[] = R"(../utils/primes.txt)";
 constexpr char fibonacci_sequence_filename[] = R"(../utils/fibonacci.txt)";
 constexpr char triangle_numbers_filename[] = R"(../utils/triangle_numbers.txt)";

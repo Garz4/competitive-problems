@@ -1,10 +1,12 @@
 #include <iostream>
 #include <vector>
 
+#include "../utils/euler.hpp"
+
 // Runtime: 0m0.001s
 
-static unsigned long long greatest_product = 0;
-static unsigned long long current_product;
+static euler::max_natural greatest_product = 0;
+static euler::max_natural current_product;
 static int current_quantity;
 
 static int i, j;

@@ -1,12 +1,14 @@
 #include <iostream>
 
+#include "../utils/euler.hpp"
+
 // Runtime: 0m0.349s
 
 static constexpr int limit = 1000000;
 
-static inline constexpr unsigned long long get_chain(const int& number) {
-  unsigned long long chain = 0;
-  unsigned long long current = number;
+static inline constexpr euler::max_natural get_chain(const int& number) {
+  euler::max_natural chain = 0;
+  euler::max_natural current = number;
 
   while (current != 1) {
     if (current % 2 == 0) {
@@ -23,7 +25,7 @@ static inline constexpr unsigned long long get_chain(const int& number) {
 
 int main(void) {
   int starting_number = 0;
-  unsigned long long starting_max = 0;
+  euler::max_natural starting_max = 0;
 
   for (int i = 1; i < limit; ++i) {
     auto chain = get_chain(i);

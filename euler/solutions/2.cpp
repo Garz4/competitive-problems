@@ -5,11 +5,11 @@
 
 // Runtime: 0m0.001s
 
-static constexpr unsigned long long target = 4000000;
+static constexpr euler::max_natural target = 4000000;
 
 int main(void) {
   const auto fibonacci = euler::fibonacci_sequence();
-  unsigned long long current_sum = 0;
+  euler::max_natural current_sum = 0;
 
   for (int i = 0; fibonacci[i] < target; ++i) {
     if (fibonacci[i] % 2 == 0) {

@@ -10,17 +10,17 @@
 
 int main() {
   const auto primes = euler::prime_numbers();
-  const unsigned long long limit = 1000000;
-  unsigned long long biggest_prime = 0;
-  unsigned long long largest_terms = 0;
-  unsigned long long current_sum;
-  unsigned long long terms;
+  const euler::max_natural limit = 1000000;
+  euler::max_natural biggest_prime = 0;
+  euler::max_natural largest_terms = 0;
+  euler::max_natural current_sum;
+  euler::max_natural terms;
 
-  for (unsigned long long i = 0; i < primes.size(); ++i) {
+  for (euler::max_natural i = 0; i < primes.size(); ++i) {
     terms = 1;
     current_sum = primes[i];
 
-    for (unsigned long long j = i + 1; j < primes.size(); ++j) {
+    for (euler::max_natural j = i + 1; j < primes.size(); ++j) {
       current_sum += primes[j];
       terms++;
 

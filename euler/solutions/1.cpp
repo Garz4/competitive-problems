@@ -1,5 +1,7 @@
 #include <iostream>
 
+#include "../utils/euler.hpp"
+
 // Runtime: 0m0.001s
 
 static inline constexpr bool is_multiple(const int& number) {
@@ -8,7 +10,7 @@ static inline constexpr bool is_multiple(const int& number) {
 
 int main(void) {
   const int limit = 1000;
-  unsigned long long sum = 0;
+  euler::max_natural sum = 0;
 
   for (int i = 0; i < limit; ++i) {
     if (is_multiple(i)) {
