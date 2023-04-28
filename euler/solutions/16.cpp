@@ -1,5 +1,7 @@
 #include <iostream>
 
+#include "../utils/euler.hpp"
+
 // Runtime: 0m0.001s
 
 static constexpr char two_one_thounsand[] = 
@@ -16,7 +18,7 @@ int main(void) {
       break;
     }
 
-    sum += (digit - '0');
+    sum += euler::to_digit(digit);
   }
 
   std::cout << sum << std::endl;

@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 
+#include "../utils/euler.hpp"
+
 // Runtime: 0m0.001s
 
 static constexpr size_t big_numbers_size = 100;
@@ -115,7 +117,7 @@ int main(void) {
     int sum = 0;
 
     for (int row = 0; row < big_numbers_size; row++) {
-      sum += big_numbers[row][col] - '0';
+      sum += euler::to_digit(big_numbers[row][col]);
     }
 
     sum += result[col + 1];

@@ -38,7 +38,7 @@ int main(void) {
       continue;
     }
 
-    current_product = (big_number[i] - '0');
+    current_product = euler::to_digit(big_number[i]);
 
     for (int j = 1; j < digits; ++j) {
       if (big_number[i + j] == '0') {
@@ -46,7 +46,7 @@ int main(void) {
         break;
       }
 
-      current_product *= (big_number[i + j] - '0');
+      current_product *= euler::to_digit(big_number[i + j]);
     }
 
     max_product = std::max(max_product, current_product);

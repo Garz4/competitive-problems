@@ -8,15 +8,25 @@
 
 namespace euler {
 
+// This "natural" definition includes zero.
+using min_natural = unsigned short;
+using natural = unsigned int;
+using big_natural = unsigned long;
 using max_natural = unsigned long long;
+
+using min_integer = short;
+using integer = int;
+using big_integer = long;
 using max_integer = long long;
 
 constexpr char prime_numbers_filename[] = R"(../utils/primes.txt)";
 constexpr char fibonacci_sequence_filename[] = R"(../utils/fibonacci.txt)";
 constexpr char triangle_numbers_filename[] = R"(../utils/triangle_numbers.txt)";
 
+constexpr inline short to_digit(const char& digit) { return digit - '0'; }
+
 // Throws runtime error.
-std::vector<unsigned long long> get_numbers(const char* filename) {
+std::vector<max_natural> get_numbers(const char* filename) {
   std::ifstream numbers_file(filename);
 
   if (!numbers_file.is_open()) {
@@ -24,9 +34,9 @@ std::vector<unsigned long long> get_numbers(const char* filename) {
                              + filename + "'.");
   }
 
-  std::vector<unsigned long long> response;
+  std::vector<max_natural> response;
   std::string line;
-  unsigned long long current_number;
+  max_natural current_number;
 
   while (std::getline(numbers_file, line)) {
     std::istringstream parsed(line);
