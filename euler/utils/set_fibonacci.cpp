@@ -4,7 +4,7 @@
 
 #include "euler.hpp"
 
-static constexpr unsigned long long limit = 1000000000000000000;
+static constexpr euler::max_natural limit = 1000000000000000000;
 
 int main(void) {
   std::ofstream fibonacci_file;
@@ -15,9 +15,9 @@ int main(void) {
     throw std::runtime_error("Error opening the file.");
   }
 
-  unsigned long long first = 0;
-  unsigned long long second = 1;
-  unsigned long long third;
+  euler::max_natural first = 0;
+  euler::max_natural second = 1;
+  euler::max_natural third;
 
   fibonacci_file << first << "\n";
   fibonacci_file << second << "\n";

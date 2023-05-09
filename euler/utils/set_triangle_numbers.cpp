@@ -4,7 +4,7 @@
 
 #include "euler.hpp"
 
-static constexpr unsigned long long limit = 100000;
+static constexpr euler::max_natural limit = 100000;
 
 int main(void) {
   std::ofstream triangles_file;
@@ -15,9 +15,9 @@ int main(void) {
     throw std::runtime_error("Error opening the file.");
   }
 
-  unsigned long long sum = 0;
+  euler::max_natural sum = 0;
 
-  for (unsigned long long i = 1; i < limit; ++i) {
+  for (euler::max_natural i = 1; i < limit; ++i) {
     sum += i;
     triangles_file << sum << "\n";
   }
