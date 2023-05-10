@@ -1,8 +1,8 @@
 #include <algorithm>
 #include <cmath>
 #include <iostream>
-#include <vector>
 #include <set>
+#include <vector>
 
 #include "../utils/euler.hpp"
 

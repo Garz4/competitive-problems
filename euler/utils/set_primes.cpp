@@ -4,9 +4,9 @@
 
 #include "euler.hpp"
 
-static constexpr unsigned long long limit = 10000000;
+static constexpr euler::max_natural limit = 10000000;
 
-static inline constexpr bool is_prime(const unsigned long long& number) {
+static inline constexpr bool is_prime(const euler::max_natural& number) {
   for (int i = 2; i <= std::ceil(std::sqrt(number)); ++i) {
     if (number % i == 0) {
       return false;
