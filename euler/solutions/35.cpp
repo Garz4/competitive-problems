@@ -8,9 +8,8 @@
 static constexpr int limit = 1000000;
 static const auto primes = euler::prime_numbers();
 
-bool debug = false;
-
-static bool rotations_are_primes(const euler::max_natural& prime) {
+static constexpr inline bool rotations_are_primes(
+    const euler::max_natural& prime) noexcept {
   auto prime_aux = prime;
   int digits = 1;
 

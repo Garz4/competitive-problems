@@ -5,7 +5,7 @@
 
 // Runtime: 0m0.080s
 
-static inline constexpr auto d(const int& number) {
+static constexpr inline auto d(const int& number) noexcept {
   euler::max_natural sum_proper_divisors = 0;
 
   for (int i = 1; i <= number / 2; ++i) {

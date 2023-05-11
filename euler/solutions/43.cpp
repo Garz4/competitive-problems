@@ -25,6 +25,19 @@ static void permute(std::string& current, int left, int right) {
   }
 }
 
+static inline bool check_property(
+    const std::string& permutation,
+    const std::size_t& index_1,
+    const std::size_t& index_2,
+    const std::size_t& index_3,
+    const std::size_t& index_divisible) noexcept {
+  return std::stoi(std::string() +
+                   permutation[index_1] +
+                   permutation[index_2] +
+                   permutation[index_3])
+           % divisibles[index_divisible] == 0;
+}
+
 int main() {
   std::string base = "0123456789";
   euler::max_natural sum = 0;
@@ -32,13 +45,13 @@ int main() {
   permute(base, 0, base.length() - 1);
 
   for (const auto& permutation : permutations) {
-    if (std::stoi(std::string() + permutation[1] + permutation[2] + permutation[3]) % divisibles[0] == 0
-        && std::stoi(std::string() + permutation[2] + permutation[3] + permutation[4]) % divisibles[1] == 0
-        && std::stoi(std::string() + permutation[3] + permutation[4] + permutation[5]) % divisibles[2] == 0
-        && std::stoi(std::string() + permutation[4] + permutation[5] + permutation[6]) % divisibles[3] == 0
-        && std::stoi(std::string() + permutation[5] + permutation[6] + permutation[7]) % divisibles[4] == 0
-        && std::stoi(std::string() + permutation[6] + permutation[7] + permutation[8]) % divisibles[5] == 0
-        && std::stoi(std::string() + permutation[7] + permutation[8] + permutation[9]) % divisibles[6] == 0) {
+    if (check_property(permutation, 1, 2, 3, 0)
+        && check_property(permutation, 2, 3, 4, 1)
+        && check_property(permutation, 3, 4, 5, 2)
+        && check_property(permutation, 4, 5, 6, 3)
+        && check_property(permutation, 5, 6, 7, 4)
+        && check_property(permutation, 6, 7, 8, 5)
+        && check_property(permutation, 7, 8, 9, 6)) {
       sum += std::stoull(permutation);
     }
   }
@@ -47,3 +60,4 @@ int main() {
 
   return 0;
 }
+

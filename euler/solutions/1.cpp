@@ -4,7 +4,7 @@
 
 // Runtime: 0m0.001s
 
-static inline constexpr bool is_multiple(const int& number) {
+static constexpr inline bool is_multiple(const int& number) noexcept {
   return number % 3 == 0 || number % 5 == 0;
 }
 

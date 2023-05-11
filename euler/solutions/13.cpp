@@ -126,13 +126,8 @@ int main(void) {
   }
 
   int i = 0;
-  while (result[i] == 0) {
-    i++;
-  }
-
-  for (; i <= 8; i++) {
-    std::cout << result[i];
-  }
+  while (result[i] == 0) { i++; }
+  for (; i <= 8; i++) { std::cout << result[i]; }
 
   std::cout << std::endl;
 

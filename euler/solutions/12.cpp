@@ -9,8 +9,8 @@ static constexpr int initial_value = 1;
 static constexpr int limit = INT_MAX;
 static constexpr int expected_divisors = 500;
 
-static inline constexpr int get_total_divisors(
-    const euler::max_natural& number) {
+static constexpr inline int get_total_divisors(
+    const euler::max_natural& number) noexcept {
   int total_divisors = 0;
 
   for (int i = 1; i <= number; ++i) {

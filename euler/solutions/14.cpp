@@ -6,7 +6,8 @@
 
 static constexpr int limit = 1000000;
 
-static inline constexpr euler::max_natural get_chain(const int& number) {
+static constexpr inline euler::max_natural get_chain(
+    const int& number) noexcept {
   euler::max_natural chain = 0;
   euler::max_natural current = number;
 

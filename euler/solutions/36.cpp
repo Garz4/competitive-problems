@@ -9,7 +9,7 @@
 
 constexpr int limit = 1000000;
 
-static inline bool is_palindrome(const std::string& sentence) {
+static inline bool is_palindrome(const std::string& sentence) noexcept {
   std::size_t i = 0;
 
   while (sentence[i] == '0') { ++i; }

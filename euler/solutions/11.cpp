@@ -36,7 +36,10 @@ static constexpr int matrix[size][size] = {
 {1,70,54,71,83,51,54,69,16,92,33,48,61,43,52,1,89,19,67,48}};
 
 static inline void compute_direction(
-    const size_t& x, const size_t& y, const int& x_add, const int& y_add) {
+    const size_t& x,
+    const size_t& y,
+    const int& x_add,
+    const int& y_add) noexcept {
   current_product = 1;
   current_quantity = quantity;
 
@@ -52,7 +55,8 @@ static inline void compute_direction(
   }
 }
 
-static inline void compute_all_products(const size_t& x, const size_t& y) {
+static inline void compute_all_products(
+    const size_t& x, const size_t& y) noexcept {
   // Up
   compute_direction(x, y, -1, 0);
 

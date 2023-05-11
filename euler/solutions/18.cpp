@@ -24,7 +24,7 @@ static const std::vector<std::vector<int>> triangle =
 };
 
 static inline void path_sum(
-    const size_t& i, const size_t& j, int sum) {
+    const size_t& i, const size_t& j, int sum) noexcept {
   if (i < 0 || i >= triangle.size() || j < 0 || j >= triangle[i].size()) {
     return;
   }
