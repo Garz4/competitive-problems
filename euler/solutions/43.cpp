@@ -16,6 +16,7 @@ static void permute(std::string& current, int left, int right) {
     for (int i = left; i <= right; i++) {
       std::swap(current[left], current[i]);
 
+      // Skip numbers that start with 0.
       if (current.front() != '0') {
         permute(current, left + 1, right);
       }
@@ -60,4 +61,3 @@ int main() {
 
   return 0;
 }
-

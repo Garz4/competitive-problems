@@ -25,7 +25,7 @@ constexpr char triangle_numbers_filename[] = R"(../utils/triangle_numbers.txt)";
 
 constexpr inline short to_digit(const char& digit) { return digit - '0'; }
 
-// Throws runtime error.
+// @exception
 std::vector<max_natural> get_numbers(const char* filename) {
   std::ifstream numbers_file(filename);
 
